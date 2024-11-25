@@ -18,6 +18,8 @@ Change the parameters in app/config.py to optimise the crawling for that domain
 Execute the program and wait for the output with your coffee!
 `python -m app.app.py`
 
+Sample extraction of 1000 urls can be found in `nike_product_urls.txt`
+
 ### Future Improvements
 
 - Add a distributed processing/ async processing library to crawl the domains parallely and extract urls from single domain simultaneously
