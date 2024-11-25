@@ -19,7 +19,8 @@ class URLCrawler:
             path = link.get("href")
             if path and path.startswith("/"):
                 path = urljoin(self.url, path)
-            linked_urls.add(path)
+            if type(path) is str:
+                linked_urls.add(path)
         return linked_urls
 
     def crawl(self) -> set:

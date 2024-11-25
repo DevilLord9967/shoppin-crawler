@@ -7,7 +7,7 @@ class AppSettings(BaseSettings):
     
     #* Configuration to optimize the crawler
     URL_CRAWL_BUFFER: float = 0.4 # seconds
-    PRODUCT_URL_PATTERNS: List[str] = [".\/t\/."]
+    PRODUCT_URL_PATTERNS: List[str] = [".\/t\/.", ".\/product\/."]
     ONLY_CRAWL_DOMAIN: bool = True
     
     #TODO: Future Consideration
