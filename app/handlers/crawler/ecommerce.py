@@ -10,9 +10,10 @@ from .url import URLCrawler
 
 
 class ECommerceCrawler:
-    def __init__(self, domain_url: str, domain_name: str) -> None:
+    def __init__(self, domain_url: str, domain_name: str, sample: int = None) -> None:
         self.domain_url = domain_url
         self.domain_name = domain_name
+        self.sample = sample
         self.visited_urls = set()
         self.product_urls = set()
         self.urls_to_visit = []
@@ -57,8 +58,8 @@ class ECommerceCrawler:
             finally:
                 self.visited_urls.add(url_to_crawl)
                 
-            # if len(self.product_urls) > 1000:
-            #     break
+            if self.sample is not None and len(self.product_urls) >= self.sample:
+                break
         file_name = f"{self.domain_name}_product_urls.txt"
         with open(file_name, "w") as f:
             f.write(pformat(self.product_urls))

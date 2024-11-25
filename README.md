@@ -20,6 +20,10 @@ pip install -r requirements.txt
 ```
 python -m app.app.py --domain_url https://www.nike.com/in/ --domain_name nike
 ```
+5. Specify sample arg to test
+```
+python -m app.app.py --domain_url https://www.nike.com/in/ --domain_name nike --sample 100
+```
 
 ##### 
 
