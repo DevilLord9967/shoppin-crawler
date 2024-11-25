@@ -13,19 +13,20 @@
 pip install -r requirements.txt
 ```
 
-2. Open the app/app.py and update the domain you want to crawl\
-3. Change the parameters in app/config.py to optimise the crawling for that domain\
-4. Execute the program and wait for the output with your coffee!\
+2. Change the parameters in app/config.py to optimise the crawling
+3. Specify sample arg to test
 
-```
-python -m app.app.py --domain_url https://www.nike.com/in/ --domain_name nike
-```
-5. Specify sample arg to test
 ```
 python -m app.app.py --domain_url https://www.nike.com/in/ --domain_name nike --sample 100
 ```
 
-##### 
+4. Execute the program and wait for the output with your coffee!
+
+```
+python -m app.app.py --domain_url https://www.nike.com/in/ --domain_name nike
+```
+
+#####
 
 ### C. Future Improvements
 
@@ -38,5 +39,6 @@ python -m app.app.py --domain_url https://www.nike.com/in/ --domain_name nike --
     which may prove unwarranted in this use case and will increase the depth to be crawled
 
 #### Notes:
-- Sample extraction of 1000 urls can be found in `nike_product_urls.txt`
-- Websites with Infinite scrolling and dynamic content, will require a different strategy. I do not posess deep knowledge of Frontend technologies, but I do understand these cases will have to-be tackled by either simulating the scroll (using slenium etc.) or we will have to identify the API call/ function loading the dynamic content
+
+-   Sample extraction of 1000 urls can be found in `nike_product_urls.txt`
+-   Websites with Infinite scrolling and dynamic content, will require a different strategy. I do not posess deep knowledge of Frontend technologies, but I do understand these cases will have to-be tackled by either simulating the scroll (using slenium etc.) or we will have to identify the API call/ function loading the dynamic content
